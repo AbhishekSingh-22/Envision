@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="search.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&family=Inter:wght@300&family=Montserrat&family=Nunito+Sans:wght@300;700&family=Poppins:wght@600;700&family=Raleway:wght@300;500&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        <section>
+            <div class="search">
+                <form>
+                <label for="state">State:</label>
+                <select id="state" onchange="populateCities()">
+                    <option value="">Select a state</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                </select>
+                <label for="city">City:</label>
+                <select id="city">
+                    <option value="">Select a city</option>
+                </select>
+                </form>
+                <button>Search</button>
+            </div>
+        </section>
+        
+        <script>
+          function populateCities() {
+            var stateDropdown = document.getElementById("state");
+            var cityDropdown = document.getElementById("city");
+            var selectedState = stateDropdown.value;
+            cityDropdown.innerHTML = "";
+            
+            if (selectedState === "") {
+              var defaultOption = document.createElement("option");
+              defaultOption.text = "Select a city";
+              cityDropdown.add(defaultOption);
+            } else {
+              var cities = getCities(selectedState);
+              for (var i = 0; i < cities.length; i++) {
+                var option = document.createElement("option");
+                option.text = cities[i];
+                cityDropdown.add(option);
+              }
+            }
+          }
+          
+          function getCities(state) {
+
+            var cities = [];
+            
+            switch (state) {
+              case "Andhra Pradesh":
+                cities = ["Visakhapatnam", "Vijayawada", "Guntur"];
+                break;
+              case "Arunachal Pradesh":
+                cities = ["Itanagar", "Tawang", "Ziro"];
+                break;
+            }          
+            return cities;
+          }
+        </script>
+    </body>
+</html>

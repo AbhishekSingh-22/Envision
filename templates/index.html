@@ -1,0 +1,68 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'signupcss.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat&family=Nunito+Sans:wght@300;700&family=Poppins:wght@600;700&family=Space+Grotesk:wght@700&family=Archivo:wght@700&display=swap" rel="stylesheet">
+    <title>Start Contributing | Sign Up</title>
+</head>
+<body>
+    <div class="grid">
+        <div class="image">
+            <p>
+                Our Future is 
+            <br>   
+                in Your Hands.
+            </p>
+        </div>
+        <div class="fillingarea">
+            <div class="container">
+                <h2>Volunteer Details</h2>
+                <form action="#" method="POST">
+                  <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="state">State:</label>
+                    <input type="text" id="state" name="state" required>
+                  </div>
+                  <div class="form-group">
+                    <div class="yo">
+                        <label for="profession">Profession:</label>
+                        <select id="profession" name="profession" required>
+                        <option value="">Select a profession</option>
+                        <option value="engineer">Student</option>
+                        <option value="doctor">Volunteer</option>
+                        <option value="teacher">Businessman</option>
+                        <option value="teacher">Public Sector</option>
+                        <option value="teacher">Private Sector</option>
+                        <option value="other">Other</option>
+                        </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="yo">
+                        <a href="/index2.html">Next</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+        </div>
+    </div>            
+</body>
+</html>
